@@ -199,11 +199,11 @@ def main():
             st.header('Uploaded Image')
             st.image(image, use_column_width=True)
             prediction_df = predict(image, num_of_results)
-            st.write(prediction_df)
-#             if len(prediction_df) > 0:
-#                 display_image_grid(prediction_df)
-#             else:
-#                 st.write('No results found')
+
+            if len(prediction_df) > 0:
+                display_image_grid(prediction_df)
+            else:
+                st.write('No results found')
 
     elif upload == 'Take a picture':
         img_file_buffer = st.camera_input("Take a picture")
