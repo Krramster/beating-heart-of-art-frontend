@@ -10,7 +10,7 @@ from PIL import Image
 APP_TITLE = 'The Beating Heart of Art'
 APP_SUB_TITLE = 'Discover similar artworks from the Metropolitan Museum of Art and MOMA'
 PROJECT_FOLDER = os.getcwd()
-PREDICTION_URL = os.getenv('PREDICTION_URL', 'https://krishna10000000-dwjnapaw3q-nw.a.run.app//uploader')
+PREDICTION_URL = os.getenv('PREDICTION_URL', 'http://localhost:8000/uploader')
 
 
 def predict(image_data, num_of_results=10):
@@ -182,8 +182,8 @@ def main():
     col1, col2 = st.columns([3, 1])
     with col1:
         st.title(APP_TITLE, )
-#     with col2:
-#         st.image('../../interface/resources/beating-heart-reduced2-1.gif')
+    with col2:
+        st.image('../../interface/resources/beating-heart-reduced2-1.gif')
     st.caption(APP_SUB_TITLE)
 
     # Radio with two upload options
