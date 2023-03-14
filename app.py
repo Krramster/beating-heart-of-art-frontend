@@ -182,8 +182,9 @@ def main():
     col1, col2 = st.columns([3, 1])
     with col1:
         st.title(APP_TITLE, )
-#     with col2:
-#         st.image('../../interface/resources/beating-heart-reduced2-1.gif')
+    with col2:
+        st.text(os.getcwd())
+        #st.image('../../interface/resources/beating-heart-reduced2-1.gif')
     st.caption(APP_SUB_TITLE)
 
     # Radio with two upload options
